@@ -31,7 +31,7 @@ pipeline
       steps
       {
         echo 'dockerization completed'
-        echo 'current build result is: '${env.currentBuild.result}
+        echo 'current build result is: ${env.currentBuild.result}'
         echo env
       }
     }
