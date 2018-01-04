@@ -24,14 +24,17 @@ pipeline
         {
           echo 'Testing completed'
         }
-        stage('docker')
+      }
+      stage('docker')
+      {
+        step
         {
-          step
-          {
-            echo 'dockerization completed'
-          }
+          echo 'dockerization completed'
         }
       }
     }
+  }
+}
+
 
       
