@@ -1,36 +1,34 @@
 pipeline
 {
   agent any
+  stages
   {
-    stages
+    stage('scm')
     {
-      stage('scm')
+      steps
       {
-        step
-        {
-          echo 'scm completed'
-        }
+        echo 'scm completed'
       }
-      stage('build')
+    }
+    stage('build')
+    {
+      steps
       {
-        step
-        {
-          echo 'Build completed'
-        }
+        echo 'Build completed'
       }
-      stage('test')
+    }
+    stage('test')
+    {
+      steps
       {
-        step
-        {
-          echo 'Testing completed'
-        }
+        echo 'Testing completed'
       }
-      stage('docker')
+    }
+    stage('docker')
+    {
+      steps
       {
-        step
-        {
-          echo 'dockerization completed'
-        }
+        echo 'dockerization completed'
       }
     }
   }
