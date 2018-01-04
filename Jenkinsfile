@@ -39,7 +39,7 @@ pipeline
   {
     success
     {
-      slackSend(channel: '#gaganglobal', color: 'Green',messages: 'The env.BUILD_URL is finished successfully')
+      slackSend(channel: '#gaganglobal', color: 'good', messages: 'The env.BUILD_URL is finished successfully')
     }
   }
 }
