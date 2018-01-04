@@ -1,6 +1,6 @@
 pipeline
 {
-  agent any
+  node('build-node')
   stages
   {
     stage('scm')
