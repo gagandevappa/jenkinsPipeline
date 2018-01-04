@@ -31,7 +31,7 @@ pipeline
       steps
       {
         echo 'dockerization completed: '+env.BUILD_URL
-        echo sh(script: 'env', returnStdout: true)
+        //echo sh(script: 'env', returnStdout: true)
       }
     }
   }
