@@ -32,7 +32,7 @@ pipeline
       {
         echo 'dockerization completed'
         sh 'env > env.txt'
-        for(String i:readFile('env.txt').split("\r?\n")) {
+        for (String i : readFile('env.txt').split("\r?\n")) {
                               println i
                               }
         echo 'current build result is: env'
