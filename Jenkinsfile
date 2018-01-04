@@ -30,7 +30,7 @@ pipeline
     {
       steps
       {
-        echo 'dockerization completed'
+        echo 'dockerization completed: ${env.BUILD_URL}'
         echo sh(script: 'env', returnStdout: true)
       }
     }
