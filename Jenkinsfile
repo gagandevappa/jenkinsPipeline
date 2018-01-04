@@ -1,6 +1,6 @@
 pipeline
 {
-  node('build-node')
+  agent any
   stages
   {
     stage('scm')
@@ -32,10 +32,11 @@ pipeline
       {
         echo 'dockerization completed'
         sh 'env > env.txt'
-        for (String i : readFile('env.txt').split("\r?\n")) {
+        sh 'echo `env`'
+        for (String i : readFile('env.txt').split("\r?\n")).each {
                               println i
                               }
-        echo 'current build result is: env'
+        echo 'current build result is: `env`
       }
     }
   }
