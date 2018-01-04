@@ -31,8 +31,12 @@ pipeline
       steps
       {
         echo 'dockerization completed'
-        echo 'current build result is: ${env.currentBuild.result}'
-        echo env
+        sh 'env > env.txt'
+        for(String i:readFile('env.txt).split("\r?\n"))
+                              {
+                                println i
+                              }
+        echo 'current build result is: env'
       }
     }
   }
