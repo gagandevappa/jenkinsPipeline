@@ -34,14 +34,12 @@ pipeline
         //echo sh(script: 'env', returnStdout: true)
       }
     }
-    post
+  }
+  post
+  {
+    success
     {
-      slackSend
-      {
-        channel: '#gaganglobal'
-        color: 'Green'
-        messages: 'The env.BUILD_URL is finished successfully'
-      }
+      slackSend(channel: '#gaganglobal', color: 'Green',messages: 'The env.BUILD_URL is finished successfully')
     }
   }
 }
