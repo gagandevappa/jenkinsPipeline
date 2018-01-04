@@ -31,12 +31,7 @@ pipeline
       steps
       {
         echo 'dockerization completed'
-        sh 'env > env.txt'
-        sh 'echo `env`'
-        for (String i : readFile('env.txt').split("\r?\n")).each {
-                              println i
-                              }
-        echo 'current build result is: `env`
+        echo sh(script: 'env', returnStdout: true)
       }
     }
   }
