@@ -30,7 +30,7 @@ pipeline
     {
       steps
       {
-        echo 'dockerization completed: '+env.BUILD_URL
+        echo "dockerization completed: ${env.BUILD_URL}"
         //echo sh(script: 'env', returnStdout: true)
       }
     }
@@ -39,7 +39,7 @@ pipeline
   {
     success
     {
-      slackSend(channel: '#gaganglobal', color: 'good', message: 'The ${env.BUILD_URL} is finished successfully')
+      slackSend(channel: '#gaganglobal', color: 'good', message: "The ${env.BUILD_URL} is finished successfully")
     }
   }
 }
