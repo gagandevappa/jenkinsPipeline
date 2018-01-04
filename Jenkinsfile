@@ -7,6 +7,8 @@ pipeline
     {
       steps
       {
+        checkout 'scm'
+        archiveArtifacts artifacts:'.', fingerprint: true
         echo 'scm completed'
       }
     }
