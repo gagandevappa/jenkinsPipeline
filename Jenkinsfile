@@ -34,6 +34,15 @@ pipeline
         //echo sh(script: 'env', returnStdout: true)
       }
     }
+    post
+    {
+      slackSend
+      {
+        channel: '#gaganglobal'
+        color: 'Green'
+        messages: 'The env.BUILD_URL is finished successfully'
+      }
+    }
   }
 }
 
